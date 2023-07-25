@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#dice-board {
+  width: 600px;
+  height: 500px;
+}
+
+
+.wkit-button {
+  background-color: #16A249;
+}
