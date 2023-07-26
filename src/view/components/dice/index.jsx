@@ -62,7 +62,7 @@ const DiceBoard = () => {
       setSelection(-1);
       setDiceResult(-1);
       setIsRolling(false);
-    }, 5000)
+    }, 2000)
   }, [selection, diceResult]);
 
   const roll = useCallback(async (e) => {
