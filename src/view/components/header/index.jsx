@@ -10,6 +10,9 @@ const Header = () => {
         <img src={logo} width="100px"/>
       </div>
       <div className="flex-none">
+        <ul className="menu menu-horizontal px-1">
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
         <div className="dropdown dropdown-end mr-5">
           <ConnectButton>Connect Wallet</ConnectButton>
         </div>
