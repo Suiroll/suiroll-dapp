@@ -105,7 +105,7 @@ const DiceBoard = () => {
   }
 
   const disabledRollBtn = () => {
-    return !isWalletConnected() || selection === -1 || isRolling || stake <= 0 || stake > 100
+    return !isWalletConnected() || selection === -1 || isRolling || stake < 1 || stake > 100
     ? "btn-disabled"
     : "";
   }
