@@ -1,12 +1,13 @@
 import React from "react";
 import {ConnectButton} from "@suiet/wallet-kit";
 import "@suiet/wallet-kit/style.css";
+import logo from '../../../assets/images/suiroll_logo.png'
 
 const Header = () => {
   return (
     <div className="navbar bg-neutral">
       <div className="flex-1">
-        <img src="src/assets/images/suiroll_logo.png" width="100px"/>
+        <img src={logo} width="100px"/>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end mr-5">
