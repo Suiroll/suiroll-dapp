@@ -15,9 +15,15 @@ const Stats = () => {
       }
     }
 
-    run()
-    .then(() => {})
-    .catch((error) => console.log("Error loading stars ", error))
+    const intervalId = setInterval(() => {
+      run()
+      .then(() => {})
+      .catch((error) => console.log("Error loading stars ", error))
+    }, 10_000)
+
+    return () => {
+      clearInterval(intervalId)
+    }
   }, [wallet])
 
   return (
