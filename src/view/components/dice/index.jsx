@@ -93,10 +93,9 @@ const DiceBoard = () => {
     }
   }, [diceResult]);
   
-  const toggleSelection = (e) => {
+  const toggleSelection = (newSelection) => (e) => {
     e.preventDefault();
 
-    const newSelection = (selection + 1) % 2;
     setSelection(newSelection);
   }
 
@@ -134,31 +133,26 @@ const DiceBoard = () => {
     switch(selection) {
       case -1:
         return (
-          <button
-            className={"btn btn-neutral btn-block no-animation " + disabledSelectionBtn()}
-            onClick={toggleSelection}>
-              Odd or Even
-          </button>
+          <div class="btn-group btn-group-vertical lg:btn-group-horizontal w-full">
+            <button class={"btn sm:w-full lg:w-1/2 " +  disabledSelectionBtn()} onClick={toggleSelection(0)}>EVEN</button>
+            <button class={"btn sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(1)}>ODD</button>
+          </div>
         );
 
       case ODD:
         return (
-          <button
-            className={"btn btn-accent btn-block no-animation " + disabledSelectionBtn()}
-            onClick={toggleSelection}
-          >
-            Odd
-          </button>
+          <div class="btn-group btn-group-vertical lg:btn-group-horizontal w-full">
+            <button class={"btn border-r-1 sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(0)}>EVEN</button>
+            <button class={"btn btn-active sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(1)}>ODD</button>
+          </div>
         );
 
       case EVEN:
         return (
-          <button
-            className={"btn btn-primary btn-block no-animation " + disabledSelectionBtn()}
-            onClick={toggleSelection}
-          >
-            Even
-          </button>
+          <div class="btn-group btn-group-vertical lg:btn-group-horizontal w-full">
+            <button class={"btn btn-active sm:w-full lg:w-1/2 " + + disabledSelectionBtn()} onClick={toggleSelection(0)}>EVEN</button>
+            <button class={"btn sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(1)}>ODD</button>
+          </div>
         );
     }
   }
