@@ -1,7 +1,7 @@
 import {memo, useEffect, useState} from "react";
 import {useWallet} from "@suiet/wallet-kit";
 import {get} from "../../../services/api";
-import {strip0x} from "../../../services/utils";
+import {strip0x, fromBase} from "../../../services/utils";
 
 const Stats = () => {
   const wallet = useWallet();
@@ -22,22 +22,21 @@ const Stats = () => {
 
   return (
     <div className="stats shadow w-full">
-      <div className="stat place-items-center">
-        <div className="stat-title">Total Games</div>
-        <div className="stat-value">{stats.total_games}</div>
-        {/* <div className="stat-desc">From January 1st to February 1st</div> */}
+      <div className="stat place-items-center text-accent">
+        <div className="stat-title">Total Earnings</div>
+        <div className="stat-value">{stats.total_earnings && fromBase(stats.total_earnings, 9)} SUI</div>
+        <div className="stat-desc">Total Games {stats.total_games}</div>
       </div>
       
-      <div className="stat place-items-center">
+      <div className="stat place-items-center text-secondary">
         <div className="stat-title">Users</div>
-        <div className="stat-value text-secondary">{stats.total_users}</div>
-        {/* <div className="stat-desc text-secondary">↗︎ 40 (2%)</div> */}
+        <div className="stat-value">{stats.total_users}</div>
       </div>
       
-      <div className="stat place-items-center">
-        <div className="stat-title">Games You Played</div>
-        <div className="stat-value">{stats.your_games}</div>
-        {/* <div className="stat-desc">↘︎ 90 (14%)</div> */}
+      <div className="stat place-items-center text-primary">
+        <div className="stat-title">You Earned</div>
+        <div className="stat-value">{stats.your_earnings && fromBase(stats.your_earnings, 9)} SUI</div>
+        <div className="stat-desc">Games Played {stats.your_games}</div>
       </div>
     </div>
   )

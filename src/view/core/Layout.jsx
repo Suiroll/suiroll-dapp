@@ -5,7 +5,7 @@ const Layout = (props) => {
   return (
     <div>
       <Header />
-      <div className="h-screen grid grid-cols-2 place-content-center bg-[url('../assets/images/noise.svg')] bg-[#262624]">
+      <div className="py-3 grid grid-cols-2 place-content-center bg-[url('../assets/images/noise.svg')] bg-[#262624]">
         {props.children}
       </div>
       <Footer />

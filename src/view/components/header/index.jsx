@@ -1,7 +1,8 @@
 import React from "react";
 import {ConnectButton} from "@suiet/wallet-kit";
 import "@suiet/wallet-kit/style.css";
-import logo from '../../../assets/images/suiroll_logo.png'
+import logo from "../../../assets/images/suiroll_logo.png"
+import Leaderboard from "../leaderboard";
 
 const Header = () => {
   return (
@@ -10,9 +11,15 @@ const Header = () => {
         <img src={logo} width="100px"/>
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal px-1">
-          <li><a href="/faq">FAQ</a></li>
-        </ul>
+      <div className="dropdown mr-4">
+          <label tabIndex="0" className="btn btn-sm">Leaderboard</label>
+          <div
+            tabIndex="0"
+            className={"shadow menu dropdown-content z-[1] bg-base-100 rounded-box "}
+          >
+            <Leaderboard />
+          </div>
+        </div>
         <div className="dropdown dropdown-end mr-5">
           <ConnectButton>Connect Wallet</ConnectButton>
         </div>

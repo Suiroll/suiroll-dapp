@@ -133,25 +133,28 @@ const DiceBoard = () => {
     switch(selection) {
       case -1:
         return (
-          <div class="btn-group btn-group-vertical lg:btn-group-horizontal w-full">
-            <button class={"btn sm:w-full lg:w-1/2 " +  disabledSelectionBtn()} onClick={toggleSelection(0)}>EVEN</button>
-            <button class={"btn sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(1)}>ODD</button>
+          <div className="btn-group btn-group-vertical lg:btn-group-horizontal w-full">
+            <button className={"btn sm:w-full lg:w-1/2 " +  disabledSelectionBtn()} onClick={toggleSelection(0)}>EVEN</button>
+            <div className="divider divider-horizontal">OR</div>
+            <button className={"btn sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(1)}>ODD</button>
           </div>
         );
 
       case ODD:
         return (
-          <div class="btn-group btn-group-vertical lg:btn-group-horizontal w-full">
-            <button class={"btn border-r-1 sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(0)}>EVEN</button>
-            <button class={"btn btn-active sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(1)}>ODD</button>
+          <div className="btn-group btn-group-vertical lg:btn-group-horizontal w-full">
+            <button className={"btn border-r-1 sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(0)}>EVEN</button>
+            <div className="divider divider-horizontal">OR</div>
+            <button className={"btn btn-active sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(1)}>ODD</button>
           </div>
         );
 
       case EVEN:
         return (
-          <div class="btn-group btn-group-vertical lg:btn-group-horizontal w-full">
-            <button class={"btn btn-active sm:w-full lg:w-1/2 " + + disabledSelectionBtn()} onClick={toggleSelection(0)}>EVEN</button>
-            <button class={"btn sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(1)}>ODD</button>
+          <div className="btn-group btn-group-vertical lg:btn-group-horizontal w-full">
+            <button className={"btn btn-active sm:w-full lg:w-1/2 " + + disabledSelectionBtn()} onClick={toggleSelection(0)}>EVEN</button>
+            <div className="divider divider-horizontal">OR</div>
+            <button className={"btn sm:w-full lg:w-1/2 " + disabledSelectionBtn()} onClick={toggleSelection(1)}>ODD</button>
           </div>
         );
     }

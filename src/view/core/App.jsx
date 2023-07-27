@@ -6,7 +6,7 @@ import Faq from "../pages/Faq";
 
 const App = () => {
   return (
-    <div className="main flex items-center justify-center min-h-screen w-screen text-[#E5E4DC] place-content-center">
+    <div className="main flex items-center justify-center  w-screen text-[#E5E4DC] place-content-center">
       <BrowserRouter>
         <Routes>
           <Route exact strict path="/" element={<Home />} />
