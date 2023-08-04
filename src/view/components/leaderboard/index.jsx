@@ -11,6 +11,10 @@ const LeaderBoard = () => {
       setEarnings(result.earnings)
     }
 
+    run()
+    .then(() => {})
+    .catch((error) => console.log("Error loading earnings data ", error))
+
     const intervalId = setInterval(() => {
       run()
       .then(() => {})

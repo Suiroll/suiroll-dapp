@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div className="navbar bg-neutral">
       <div className="flex-1">
-        <img src={logo} width="100px"/>
+        <img src={logo} width="50px"/>
       </div>
       <div className="flex-none">
       <div className="dropdown mr-4">

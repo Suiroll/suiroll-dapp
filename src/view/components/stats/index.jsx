@@ -15,6 +15,10 @@ const Stats = () => {
       }
     }
 
+    run()
+    .then(() => {})
+    .catch((error) => console.log("Error loading stars ", error))
+
     const intervalId = setInterval(() => {
       run()
       .then(() => {})
@@ -27,7 +31,7 @@ const Stats = () => {
   }, [wallet])
 
   return (
-    <div className="stats shadow w-full">
+    <div className="stats shadow lg:w-full">
       <div className="stat place-items-center text-accent">
         <div className="stat-title">Total Earnings</div>
         <div className="stat-value">{stats.total_earnings && fromBase(stats.total_earnings, 9)} SUI</div>

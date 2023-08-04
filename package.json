@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "start": "vite",
+    "start:prod": "vite --mode production",
     "dev": "vite",
     "build": "vite build && cp -r textures dist && cp -r sounds dist",
     "serve": "vite preview"
